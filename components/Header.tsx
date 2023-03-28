@@ -27,23 +27,25 @@ export default function Header({}: Props) {
                 }}
                 className='flex flex-row items-center'>
 
-            <SocialIcon url="https://www.facebook.com/" fgColor='gray' bgColor='transparent'/>
+            <SocialIcon url="https://www.facebook.com/camilla.reppen.7/" fgColor='gray' bgColor='transparent'/>
                   
            
 
 
-                    <SocialIcon url="https://linkedin.com" fgColor='gray' bgColor='transparent'/>
+                    <SocialIcon url="https://www.linkedin.com/in/camilla-reppen-18156719b/" fgColor='gray' bgColor='transparent'/>
                   
 
 
             
-                    <SocialIcon url="https://github.com/" fgColor='gray' bgColor='transparent' />
+                    <SocialIcon url="https://github.com/camilla-design" fgColor='gray' bgColor='transparent' />
                     </motion.div>
                      
                 </div>
-
+                
+                
                
                 <div className='flex flex-row items-center text-gray-300 cursor-pointer'>
+               
                 <motion.div
                     initial={{
                         x: 500,
@@ -60,16 +62,28 @@ export default function Header({}: Props) {
                         duration: 1.5,
                     }}
                     className='flex flex-row items-center'>
-
+                         
+                       
                         <SocialIcon
                         className='crusior-pointer'
                         network='email'
                         fgColor='gray'
-                        bgColor='transparent' />
-                        <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Ta Kontakt</p>
+                        bgColor='transparent'
+                        url='http://localhost:3000/#contact' />
                         
+                        <Link href="#contact">
+                        <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Ta Kontakt</p>
+                       
+                         
+                        </Link>
                         </motion.div>   
+                        
+                        
             </div>
+           
+            
+       
+            
     </div>
   )
 }
