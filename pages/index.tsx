@@ -3,9 +3,9 @@ import Head from 'next/head';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Feedback from "@/components/Feedback";
-import Projects from "@/components/Projects";
-import ContactMe from "@/components/ContactMe";
+import Feedback from "../components/Feedback";
+import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
 import Link from 'next/link';
 
 const Home: NextPage = ()  => {
