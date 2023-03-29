@@ -44,7 +44,7 @@ export default function Header({}: Props) {
                 
                 
                
-                <div className='flex flex-row items-center text-gray-300 cursor-pointer'>
+
                
                 <motion.div
                     initial={{
@@ -61,7 +61,7 @@ export default function Header({}: Props) {
                     transition={{
                         duration: 1.5,
                     }}
-                    className='flex flex-row items-center'>
+                    className='flex flex-row items-center text-gray-400 cursor-pointer'>
                          
                        
                         <SocialIcon
@@ -74,12 +74,12 @@ export default function Header({}: Props) {
                         <Link href="#contact">
                         <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Ta Kontakt</p>
                        
-                         
                         </Link>
+                    
                         </motion.div>   
                         
                         
-            </div>
+                      
            
             
        

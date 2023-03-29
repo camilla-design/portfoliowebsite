@@ -9,6 +9,7 @@ function Hero({ }: Props) {
     const [text, count] = useTypewriter({
         words: [
             "Hei. Mitt navn er Camilla",
+            "Jeg er:",
             "</> Frontend Utvikler </>",
             "{ Web Designer }",
         ],
