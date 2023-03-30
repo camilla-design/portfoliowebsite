@@ -28,7 +28,7 @@ export default defineType({
     name: "technologies",
     title: "Technologies",
     type: "array",
-    of: [{ type: "reference", to: { type: "social"}}],
+    of: [{ type: "reference", to: { type: "technologies"}}],
   },
   ],
 

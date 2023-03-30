@@ -23,8 +23,8 @@ export interface PageInfo extends SanityBody {
 
 }
 
-export interface Feedback extends SanityBody {
-    _type: "feedback";
+export interface FeedbackInformation extends SanityBody {
+    _type: "feedbackInformation";
     image: Image;
     name: string;
     jobTitle: string;
@@ -32,9 +32,9 @@ export interface Feedback extends SanityBody {
     jobPlace: string;
 }
 
-export interface Project extends SanityBody {
+export interface Projects extends SanityBody {
     title: string;
-    _type: "project";
+    _type: "projects";
     image: Image;
     summary: string;
     technologies: Technology[];
