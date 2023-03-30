@@ -32,7 +32,7 @@ export interface Feedback extends SanityBody {
     jobPlace: string;
 }
 
-export interface Projects extends SanityBody {
+export interface Project extends SanityBody {
     title: string;
     _type: "project";
     image: Image;
@@ -41,8 +41,3 @@ export interface Projects extends SanityBody {
 
 }
 
-export interface Social extends SanityBody {
-    _type: "social";
-    title: string;
-    url: string;
-}
