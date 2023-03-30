@@ -18,7 +18,7 @@ export interface PageInfo extends SanityBody {
     backgroundInformation: string;
     name: string,
     role: string;
-    image: Image;
+    heroImage: Image;
     profilePicture: Image;
 
 }
@@ -38,6 +38,12 @@ export interface Projects extends SanityBody {
     image: Image;
     summary: string;
     technologies: Technology[];
+
+}
+
+export interface Technologies extends SanityBody {
+    title: string;
+    _type: "technologies";
 
 }
 
