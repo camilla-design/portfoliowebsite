@@ -7,6 +7,19 @@ import Feedbacks from "../components/FeedbacksInformation";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Link from 'next/link';
+import { FeedbackInformation, PageInfo, Project, Technologies } from "@/typings";
+import { fetchPageInfo } from "@/utils/fetchPageInfo";
+import { fetchFeedbacks } from "@/utils/fetchFeedbacks";
+import { fetchProjects } from "@/utils/fetchProjects";
+import { fetchTechnologies } from "@/utils/fetchTechnologies";
+
+type Props = {
+  pageInfo: PageInfo;
+  feedback: FeedbackInformation[];
+  project: Project[];
+  technologies: Technologies[];
+  
+}
 
 
 const Home: NextPage = ()  => {
@@ -63,3 +76,19 @@ const Home: NextPage = ()  => {
 
 export default Home;
 
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const feedback: FeedbackInformation[] = await fetchFeedbacks();
+  const project: Project[] = await fetchProjects();
+  const technologies: Technologies[] = await fetchTechnologies();
+
+
+  return {
+    props: {
+      pageInfo,
+      feedback,
+      project,
+      technologies,
+    }
+  }
+}
