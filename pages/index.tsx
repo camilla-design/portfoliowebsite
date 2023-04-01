@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetStaticProps } from "next";
 import Head from 'next/head';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -22,7 +22,7 @@ type Props = {
 }
 
 
-const Home: NextPage = ()  => {
+const Home = ({pageInfo, feedback, project, technologies}: Props)  => {
   return (
     <>
       <Head>
@@ -89,6 +89,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       feedback,
       project,
       technologies,
-    }
+    },
+    revalidate: 10,
   }
 }
