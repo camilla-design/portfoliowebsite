@@ -15,14 +15,14 @@ import { fetchTechnologies } from "@/utils/fetchTechnologies";
 
 type Props = {
   pageInfo: PageInfo;
-  feedback: FeedbackInformation[];
+  feedbackInfo: FeedbackInformation[];
   project: Project[];
   technologies: Technologies[];
   
 }
 
 
-const Home = ({pageInfo, feedback, project, technologies}: Props)  => {
+const Home = ({pageInfo, feedbackInfo, project, technologies}: Props)  => {
   return (
     <>
       <Head>
@@ -35,22 +35,22 @@ const Home = ({pageInfo, feedback, project, technologies}: Props)  => {
      
      {/** Hero */}
      <section id="hero" className='snap-start'>  
-     <Hero />
+     <Hero pageInfo={pageInfo}/>
      </section>
 
      {/** About */}
      <section id="about" className='snap-center'>
-     <About />
+     <About pageInfo={pageInfo}  />
      </section>
 
      {/** Feedback */}
      <section id="feedback" className='snap-center'>
-     <Feedbacks />
+     <Feedbacks feedbackInfo={feedbackInfo} />
      </section>
 
      {/* Projects */ }
      <section id="projects" className="snap-start">
-     <Projects />
+     <Projects project={project} />
      </section>
 
 
@@ -78,7 +78,7 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
-  const feedback: FeedbackInformation[] = await fetchFeedbacks();
+  const feedbackInfo: FeedbackInformation[] = await fetchFeedbacks();
   const project: Project[] = await fetchProjects();
   const technologies: Technologies[] = await fetchTechnologies();
 
@@ -86,7 +86,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       pageInfo,
-      feedback,
+      feedbackInfo,
       project,
       technologies,
     },

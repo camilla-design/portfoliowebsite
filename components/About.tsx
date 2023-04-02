@@ -1,9 +1,15 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { PageInfo } from '@/typings';
+import { urlFor } from "@/sanity";
 
-type Props = {}
 
-function About({ }: Props) {
+
+type Props = {
+    pageInfo: PageInfo;
+}
+
+function About({ pageInfo }: Props) {
     return (
         <motion.div
             initial={{
@@ -34,16 +40,12 @@ function About({ }: Props) {
                 viewport={{
                     once: true,
                 }}
-                src="https://scontent.fosl3-2.fna.fbcdn.net/v/t1.6435-9/83977659_10162783925640057_1055926471454883840_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=1mhKfkEqtL8AX_D8PO6&_nc_ht=scontent.fosl3-2.fna&oh=00_AfCobGFFnuKA5290uZTmJs_M0nPwf3qt0c0zkK4XLfV52Q&oe=644AD46E"
+                src={urlFor(pageInfo?.heroImage).url()}
                 className='-mb-20 mb:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-2xl lg:w-[400px] lg:h-[400px]'
             />
             <div className='space-y-3 px-0 md:px-10'>
                 <h4 className='text-4xl text-[#CC8D3B] font-semibold'>Her er <span className='underline decoration-[#8C4D16]/50'>litt</span>{" "} om meg</h4>
-                <p className='text-base p-4 md:p-0 w-[400px]'>Lidenskap for å designe og kode fine og funksjonelle bruker opplevelser. Samt lidenskap for å glede kundene og skape visjon av dems budskap.
-
-                    Jeg vil gjøre mitt ytterste for å inspirere brukere og deg/kunder, med moderne og brukervennlig design og koder.
-
-                    Mitt mål som designer er å skape trygghet, stabilt og ærlig miljø. Besitter en kombinasjon av teknisk og visuell kompetanse, brukerorienterte løsninger for web- og mobile enheter til fingerspissene. Lage unike, moderne designer som passer til kundens målgruppe. Frontend Utvikler som fokuserer på organisert, elegant og effektiv kode.</p>
+                <p className='text-base p-4 md:p-0 w-[400px]' > {pageInfo?.backgroundInformation}</p>
             </div>
         </motion.div>
     )

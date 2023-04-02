@@ -5,18 +5,20 @@ import { FeedbackInformation } from "@/typings";
 
 
 const query = groq`
-    *[_type == "feedback"]
+*[_type == "feedback"] {
+    ...,
+}
 `
 
 type Data = {
-    feedback: FeedbackInformation[];
+    feedbackInfo: FeedbackInformation[];
 }
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const feedback: FeedbackInformation[] = await sanityClient.fetch(query)
+    const feedbackInfo: FeedbackInformation[] = await sanityClient.fetch(query)
 
-    res.status(200).json({ feedback })
+    res.status(200).json({ feedbackInfo })
 }

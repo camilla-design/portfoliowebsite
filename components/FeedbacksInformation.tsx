@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import FeedbackCard from './FeedbackCards';
+import { FeedbackInformation } from '@/typings';
 
-type Props = {}
+type Props = {
+    feedbackInfo: FeedbackInformation[];
+}
 
-function Feedback({}: Props) {
+function Feedback({ feedbackInfo }: Props) {
   return (
     <motion.div 
     initial={{
@@ -22,9 +25,9 @@ function Feedback({}: Props) {
 
         <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#8C4D16]'>
             
-            <FeedbackCard />
-            <FeedbackCard />
-            <FeedbackCard />
+           {feedbackInfo?.map(feedbackInfo => (
+            <FeedbackCard key={feedbackInfo._id} feedbackInfo={feedbackInfo} />
+           ))}
         </div>
     </motion.div>
   )
