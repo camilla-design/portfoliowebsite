@@ -9,7 +9,7 @@ type Props = {
 
 function FeedbackCards({ feedbackInfo }: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[600px] xl:w-[900px] snap-center bg-[#CC8D3B] p-5 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[400px] md:w-[600px] xl:w-[800px] snap-center bg-[#CC8D3B] p-5 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.img
         initial={{
             y: -100,
@@ -32,7 +32,7 @@ function FeedbackCards({ feedbackInfo }: Props) {
              <h4 className='text-1xl font-light'>{feedbackInfo?.jobPlace}</h4>
              <p className='uppercase text-2l mt-2'>{feedbackInfo?.name}</p>
              <p className='text-[#000000] uppercase tracking-[8px] mb-2'>{feedbackInfo?.jobTitle}</p>
-             <p className='w-[300px]'> {feedbackInfo?.feedback}</p>
+             <p className='w-[300px] md:w-[300px] xl:w-[500px]'> {feedbackInfo?.feedback}</p>
          </div>
     </article>
   )

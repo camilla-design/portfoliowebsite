@@ -17,12 +17,11 @@ type Props = {
   pageInfo: PageInfo;
   feedbackInfo: FeedbackInformation[];
   project: Project[];
-  technologies: Technologies[];
   
 }
 
 
-const Home = ({pageInfo, feedbackInfo, project, technologies}: Props)  => {
+const Home = ({pageInfo, feedbackInfo, project}: Props)  => {
   return (
     <>
       <Head>
@@ -80,7 +79,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const feedbackInfo: FeedbackInformation[] = await fetchFeedbacks();
   const project: Project[] = await fetchProjects();
-  const technologies: Technologies[] = await fetchTechnologies();
+ 
 
 
   return {
@@ -88,7 +87,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       pageInfo,
       feedbackInfo,
       project,
-      technologies,
+   
     },
     revalidate: 10,
   }

@@ -51,7 +51,7 @@ function Projects({ project }: Props) {
 
                         <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                             <h4 className='uppercase text-l text-gray-400 text-center'>Prosjekt {i + 1} av : <br></br><span className='uppercase tracking-[13px] text-gray-300'>{project?.title}</span></h4>
-                                <p className='text-xs text-center '>  </p>
+                           
                             <p className='text-m text-center md:text-left text-gray-300'> {project?.summary}</p>
 
                         </div>
