@@ -44,8 +44,8 @@ function About({ pageInfo }: Props) {
                 className='-mb-20 mt-7 mb:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-2xl lg:w-[400px] lg:h-[400px]'
             />
             <div className='space-y-3 px-0 md:px-10'>
-                <h4 className='text-2xl text-[#CC8D3B] font-semibold'>Her er <span className='underline decoration-[#8C4D16]/50'>litt</span>{" "} om meg</h4>
-                <p className='text-base p-4 md:p-0 w-[400px]' > {pageInfo?.backgroundInformation}</p>
+                <h4 className='text-2xl text-[#2272FF] font-semibold'>Her er <span className='underline decoration-gray-400'>litt</span>{" "} om meg</h4>
+                <p className='text-base p-4 md:p-0 w-[360px] md:w-[400]'  > {pageInfo?.backgroundInformation}</p>
             </div>
         </motion.div>
     )

@@ -28,17 +28,17 @@ const Home = ({pageInfo, feedbackInfo, project}: Props)  => {
         <title>Portfolio Website</title>
        
       </Head>
-      <div className="bg-[#00010D] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#8C4D16]">
+      <div className="text-gray-400 bg-black h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#8C4D16]">
      {/** Header */}
-     <Header />
+     <Header  />
      
      {/** Hero */}
-     <section id="hero" className='snap-start'>  
+     <section id="hero" className='snap-start '>  
      <Hero pageInfo={pageInfo}/>
      </section>
 
      {/** About */}
-     <section id="about" className='snap-center'>
+     <section id="about" className='snap-center '>
      <About pageInfo={pageInfo}  />
      </section>
 
@@ -61,7 +61,7 @@ const Home = ({pageInfo, feedbackInfo, project}: Props)  => {
      <Link href="#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
-            <p className='text-center justify-center h-10 w-10 rounded-full bg-[#CC8D3B] text-white text-xs'></p>
+            <p className='text-center justify-center h-10 w-10 rounded-full bg-[#2272FF] text-white text-xs'></p>
 
             
           </div>
