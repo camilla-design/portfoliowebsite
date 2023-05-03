@@ -24,6 +24,11 @@ export default defineType({
     title: "summary",
     type: "text",
    },
+   {
+    name: "projectLink",
+    title: "ProjectLink",
+    type: "text",
+   },
   {
     name: "technologies",
     title: "Technologies",
