@@ -36,8 +36,8 @@
     "tailwindcss": "^3.2.7"
   }, 
   "cacheDirectories": [
-    "node_modules",
-    ".next/cache"
+    "node_modules/",
+    ".next/cache/"
 
   ]
 
